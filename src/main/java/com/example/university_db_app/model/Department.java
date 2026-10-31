@@ -24,8 +24,7 @@ public class Department {
  private String code;
  @Column(name = "name", nullable = false, length = 100)
  private String name;
- // ONE department has MANY lecturers. "mappedBy" = the foreign key lives in the lecturer
-table.
+ // ONE department has MANY lecturers. "mappedBy" = the foreign key lives in the lecturer table.
  @OneToMany(mappedBy = "department")
  private List<Lecturer> lecturers = new ArrayList<>();
 }
